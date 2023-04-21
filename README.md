@@ -5,4 +5,5 @@
 Implementations of the solutions for the HackerRank problems for the 3 Interviews Preparation Kit
 
 ## Main Learnings
- * Problem Solving
+
+- Problems Solving
