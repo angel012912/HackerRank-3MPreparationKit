@@ -17,10 +17,22 @@ import sys
 
 def dynamicArray(n, queries):
     # Write your code here
-    pass
+    arr = [[] for _ in range(n)]
+    lastAnswer = 0
+    result = []
+    for query in queries:
+        idx = ((query[1]^lastAnswer)%n)
+        if query[0] == 1:
+            arr[idx].append(query[2])
+        elif query[0] == 2:
+            lastAnswer = arr[idx][query[2]%len(arr[idx])]
+            result.append(lastAnswer)
+    return result
 
 if __name__ == '__main__':
     n = 2
     queries = [[1, 0, 5], [1, 1, 7], [1, 0, 3], [2, 1, 0], [2, 1, 1]]
     result = dynamicArray(n, queries)
-    print(result)
+    for answer in result:
+        print(answer)
+
