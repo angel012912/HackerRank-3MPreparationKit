@@ -15,6 +15,7 @@ import sys
 #  2. STRING password
 #
 
+
 def minimumNumber(n, password):
     # Return the minimum number of characters to make the password strong
     constraints = 4
@@ -39,6 +40,7 @@ def minimumNumber(n, password):
         return 6-n
     else:
         return constraints
+
 
 if __name__ == '__main__':
     n = 3
